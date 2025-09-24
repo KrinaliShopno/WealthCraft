@@ -67,8 +67,7 @@
                     <div class="header-logo">
                         <div class="shape"></div>
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-1.webp" alt="logo" width="200px" style="display: inline-block;
-    filter: brightness(0) invert(1);">
+                            <img src="assets/img/logo/logo-1.webp" alt="logo" width="200px">
                         </a>
                     </div>
                     <div class="header-items-wrap">
@@ -136,29 +135,32 @@
                                     <a href="What-We-Do.html">What We Do</a>
                                     <ul>
                                         <li><a href="Investment-Consultancy.html">Investment Consultancy</a></li>
-                                        <li><a href="Taxation-Consultancy.html">Taxation Consultancy</a></li>
+                                        <!-- <li><a href="Taxation-Consultancy.html">Taxation Consultancy</a></li>
                                         <li><a href="Gift-City-Consultancy.html">Gift City Consultancy</a></li>
-                                        <li><a href="Legal-Support.html">Legal Support</a></li>
-                                    </ul>
-                                </li>
-                                  <li class="menu-item-has-children">
-                                    <a href="#">Statutory Info</a>
-                                    <ul>
-                                         <li><a href="Investor-Charter-Annexure-A.html">Investor Charter - Annexure A</a></li>
-                                        <li><a href="Investor-Charter-Annexure-B.html">Investor Charter - Annexure B</a></li>
-                                        <li><a href="Compliance-Audit.html">Compliance Audit</a></li>
-                                        <li><a href="SEBI-Disclosure.html">SEBI Disclosure</a></li>
-                                         <li><a href="https://drive.google.com/file/d/1Uu1Ta7bjlfOx0EuZDi3pszKOkq6osNc2/view?usp=sharing"  target="_blank" >Circular on Online Dispute Resolution (ODR)</a></li>
-                                        
+                                        <li><a href="Legal-Support.html">Legal Support</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="blog-grid.html">Blog</a>
+                                    <a href="#">Statutory Info</a>
                                     <ul>
+                                        <li><a href="Investor-Charter-Annexure-A.html">Investor Charter - Annexure A</a>
+                                        </li>
+                                        <li><a href="Investor-Charter-Annexure-B.html">Investor Charter - Annexure B</a>
+                                        </li>
+                                        <li><a href="Compliance-Audit.html">Compliance Audit</a></li>
+                                        <li><a href="SEBI-Disclosure.html">SEBI Disclosure</a></li>
+                                        <li><a href="https://drive.google.com/file/d/1Uu1Ta7bjlfOx0EuZDi3pszKOkq6osNc2/view?usp=sharing"
+                                                target="_blank">Circular on Online Dispute Resolution (ODR)</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="blog-grid.html">Investor Insights</a>
+                                    <!-- <ul>
                                         <li><a href="blog-grid.html">Blog Grid</a></li>
                                         <li><a href="blog-grid-2.html">Blog list</a></li>
                                         <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -254,9 +256,11 @@
     </div>
     <!--/.sidebar-area-->
 
-    <div id="preloader">
-        <div class="loading" data-loading-text="Wealth Craft"></div>
+<div id="preloader">
+    <div class="loading">
+        <img src="assets/img/logo/logo-1.webp" alt="Logo" />
     </div>
+</div>
     <!-- ./ preloader -->
 
     <section class="page-header">
@@ -448,20 +452,19 @@
     <script src="assets/js/vendor/nice-select.js"></script>
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Wait for animation to finish before hiding preloader
-        document.addEventListener("DOMContentLoaded", function () {
-            const loader = document.querySelector(".loading:after"); // pseudo can’t be selected directly
-            const preloader = document.getElementById("preloader");
+   <script>
+    // Wait for animation to finish before hiding preloader
+    document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.getElementById("preloader");
 
-            // Use timeout equal to animation duration
-            setTimeout(() => {
-                preloader.style.opacity = "0";
-                preloader.style.transition = "opacity 0.6s ease";
-                setTimeout(() => { preloader.style.display = "none"; }, 600);
-            }, 3000); // match animation: 3s
-        });
-    </script>
+        // Use timeout equal to animation duration
+        setTimeout(() => {
+            preloader.style.opacity = "0";
+            preloader.style.transition = "opacity 0.6s ease";
+            setTimeout(() => { preloader.style.display = "none"; }, 600);
+        }, 3000); // match animation: 3s
+    });
+</script>
     <script>
         window.addEventListener("load", function () {
             const popup = document.getElementById("disclaimerPopup");
