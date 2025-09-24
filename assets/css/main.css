@@ -717,6 +717,11 @@ ul {
   br {
     display: none;
   }
+  .loading img {
+    width: 200px;  /* adjust size */
+    height: auto;
+    animation: pulse 2s infinite;
+}
 }
 /*-- Margin Top --*/
 .mt-5 {
@@ -2248,6 +2253,7 @@ ul {
   .pb-120 {
     padding-bottom: 60px;
   }
+
 }
 
 .pb-110 {
@@ -2940,7 +2946,7 @@ START: Header CSS
 }
 @media only screen and (max-width: 767px) {
   .header .primary-header-inner .header-logo img {
-    max-width: 100px;
+    max-width: 150px;
   }
 }
 .header .primary-header-inner .header-menu-wrap {
@@ -17461,7 +17467,30 @@ overflow: hidden;
   box-shadow: 0px 8px 25px rgba(0,0,0,0.3);
   animation: popIn 0.4s ease;
 }
+@media (max-width:425px) {
+  .popup-box {
+    background: #fff;
+    padding: 25px 30px;
+    max-width: 400px;
+    text-align: left;
+    border-radius: 6px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.4s 
+}
 
+}
+
+@media (max-width:375px) {
+  .popup-box {
+    background: #fff;
+    padding: 25px 30px;
+    max-width: 310px;
+    text-align: left;
+    border-radius: 6px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.4s 
+}
+}
 .popup-box p {
   font-size: 15px;
   color: #333;
@@ -17676,12 +17705,21 @@ overflow: hidden;
 .section-intro {
   font-size: 16px;
   color: #666;
-  margin-top: 10px;
+  margin-top: 40px;
+  text-align: center;
 }
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 40px;
+}
+@media (max-width:425px) {
+
+.products-grid {
+  display: grid;
+  grid-template-columns: none;
+  gap: 40px;
+}
 }
 .product-box {
   background: #376e0008;
@@ -17872,4 +17910,58 @@ overflow: hidden;
   color: #555;
   line-height: 1.7;
   margin-bottom: 25px;
+}
+
+.footer-logo-img {
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+/* reponsive */
+@media (max-width:425px) {
+  .about-content-4 .about-contact-items .about-contact .content a {
+    font-family: var(--bz-ff-heading);
+    color: var(--bz-color-theme-primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.about-content-4 .about-contact-items .about-author .name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+    .about-cta-wrap .section-heading .section-title {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 767px) {
+  .advisor-section {
+    padding: 35px 0px;
+}
+.advisor-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s 
+ease;
+}
+  .section-heading .intro {
+    font-size: 16px;
+    color: #ddd;
+    max-width: 350px;
+    margin: 0 auto 18px;
+    line-height: 1.7;
+}
+.financial-planning-modern .content-wrap
+{
+  padding: 0px;
+}
+    .factors-row {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
 }
