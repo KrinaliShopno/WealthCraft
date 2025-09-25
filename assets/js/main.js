@@ -844,13 +844,22 @@
         }
         });
 
-        function textAnimationEffect(){
-            let TextAnim = gsap.timeline();
-            let splitText = new SplitType( ".text-animation-effect", { types: 'chars' });
-            if( $('.text-animation-effect .char').length ){
-                TextAnim.from(".text-animation-effect .char", { duration: 1, x: 100, autoAlpha: 0, stagger: 0.1 }, "-=1");
-            }
-        }
+ function textAnimationEffect(){
+    let TextAnim = gsap.timeline();
+    // Split text into lines instead of characters
+    let splitText = new SplitType(".text-animation-effect", { types: 'lines' });
+
+    if( $('.text-animation-effect .line').length ){
+        TextAnim.from(".text-animation-effect .line", { 
+            duration:4, 
+            x: 200,         // slide from right
+            autoAlpha: 0,   // fade in
+            ease: "power3.out",
+            stagger: 0.2    // animate line by line
+        });
+    }
+}
+
         
         window.addEventListener("load", (event) => {
             textAnimationEffect();
