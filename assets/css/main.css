@@ -140,7 +140,7 @@ p {
   font-size: 16px;
   font-weight: var(--bz-fw-normal);
   color: var(--bz-color-text-body);
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   line-height: 28px;
 }
 
@@ -2932,7 +2932,8 @@ START: Header CSS
   }
 }
 .header .primary-header-inner .header-logo img {
-  max-width: 150px;
+  max-width: 170px;
+  margin-bottom: 15px;
 }
 @media (max-width: 1399px) {
   .header .primary-header-inner .header-logo img {
@@ -3661,6 +3662,7 @@ START: Header CSS
 .primary-header {
   width: 100%;
   border-bottom: 1px solid #f8f2f2;
+  padding: 10px 0px;
 }
 .primary-header.fixed {
   background-color: var(--bz-color-common-white);
@@ -4081,20 +4083,31 @@ START: Header CSS
 }
 @media (max-width: 1700px) {
   .hero-section .hero-mask-img {
-    max-width: 775px;
+    max-width: 650px;
+    
   }
+
 }
 @media (max-width: 1200px) {
   .hero-section .hero-mask-img {
-    max-width: 510px;
+    max-width: 450px;
   }
+
+
+
 }
 @media only screen and (max-width: 992px) {
   .hero-section .hero-mask-img {
     max-width: 389px;
   }
+  .hero-content .section-heading .section-title-1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
-@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 768px) {
   .hero-section .hero-mask-img {
     display: none;
   }
@@ -4205,11 +4218,22 @@ START: Header CSS
   .hero-content .section-heading .section-title {
     font-size: 50px;
   }
-  .hero-content .section-heading .section-title-1 {
-  font-size: 35px;
-  font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 30px;
+
+.hero-content .section-heading .section-title-1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+}
+@media only screen and (max-width: 1024px) {
+
+
+.hero-content .section-heading .section-title-1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 }
 @media only screen and (max-width: 767px) {
@@ -9203,6 +9227,7 @@ START: Contact CSS
 }
 
 .feature-item {
+  height: 100%;
   background-color: var(--bz-color-common-white);
   padding: 50px;
   border: 1px solid var(--bz-color-border-1);
@@ -9277,7 +9302,7 @@ START: Contact CSS
   transition: all 0.3s ease-in-out;
 }
 .feature-item .feature-content p {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
