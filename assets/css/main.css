@@ -4236,6 +4236,25 @@ START: Header CSS
     margin-bottom: 30px;
 }
 }
+@media (max-width: 1100px) {
+.hero-content .section-heading .section-title-1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+}
+
+/* For screens between 1200px and 1399px */
+@media (min-width:1200px) and (max-width:1399px) {
+.hero-content .section-heading .section-title-1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+}
+
 @media only screen and (max-width: 767px) {
   .hero-content .section-heading .section-title {
     font-size: 32px;
@@ -8586,7 +8605,10 @@ START: Contact CSS
   color: var(--bz-color-text-body);
   font-weight: 400;
 }
-
+.accordion-body span{
+  font-size: 14px;
+  color: var(--bz-color-theme-primary);
+}
 .faq-accordion .accordion-item .accordion-collapse {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -17454,6 +17476,10 @@ overflow: hidden;
     color: #5c5c5c;
     line-height: 1.8;
     margin-bottom: 16px;
+}
+.advisor-bio p span{
+  color: #3d3f3c;
+  font-weight: 600;
 }
 @media (max-width: 768px) {
   .advisor-header {
