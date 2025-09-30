@@ -5003,7 +5003,9 @@ background-color: rgba(21, 21, 21, 0.1);
   font-weight: 500;
   margin-bottom: 5px;
 }
-
+.gst i {
+  color: var(--bz-color-theme-primary);
+}
 .about-img-wrap-4 {
   position: relative;
   height: 600px;
