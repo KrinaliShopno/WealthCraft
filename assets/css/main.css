@@ -8549,12 +8549,12 @@ START: Contact CSS
 }
 
 .ellipsis-text {
-  display: inline-block;
-  max-width: 250px;   /* adjust width as needed */
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* ⬅ show only 2 lines */
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  vertical-align: middle;
+  max-width: 250px;        /* adjust width */
 }
 @media only screen and (max-width: 992px) {
   .faq-img {
