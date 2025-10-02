@@ -7274,18 +7274,19 @@ START: Blog CSS
 }
 .post-card .post-thumb {
   position: relative;
-  height: 255px;
+  height: 400px;
+  width: 100%;
   overflow: hidden;
 }
 .post-card .post-thumb img {
-  width: 100%;
+   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* object-fit: cover;    */
+  object-position: center; 
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  /* -webkit-transform: scale(1);
+          transform: scale(1); */
 }
 .post-card .post-content-wrap {
   background: var(--bz-color-grey-4);
