@@ -5036,7 +5036,7 @@ background-color: rgba(21, 21, 21, 0.1);
      object-fit: cover;
 }
 .about-img-wrap-4 .about-img.img-1 {
-  max-width: 285px;
+  /* max-width: 400px; */
   width: 100%;
   top: 0;
   left: 0;
@@ -7034,6 +7034,7 @@ background-color: rgba(21, 21, 21, 0.1);
 .testi-item .testi-top .testi-author img {
   height: 80px;
   width: 80px;
+  border-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -11241,9 +11242,9 @@ blockquote .content .author span {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
-  padding: 15.5px 30px;
+  padding: 13px 30px;
   border-radius: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   width: 100%;
 }
 .blog-contact-form .request-form .form-item .form-control::-webkit-input-placeholder {
@@ -11269,7 +11270,7 @@ blockquote .content .author span {
 .blog-contact-form .request-form .form-item .form-control.nice-select {
   height: auto;
   line-height: inherit;
-  padding: 15.5px 30px;
+  padding: 13px 30px;
 }
 .blog-contact-form .request-form .form-item .form-control.nice-select:after {
   top: 46%;
