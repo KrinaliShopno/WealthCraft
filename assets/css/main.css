@@ -11271,6 +11271,7 @@ blockquote .content .author span {
   height: auto;
   line-height: inherit;
   padding: 13px 30px;
+  margin-bottom: 20px;
 }
 .blog-contact-form .request-form .form-item .form-control.nice-select:after {
   top: 46%;
@@ -11290,7 +11291,7 @@ blockquote .content .author span {
 }
 .blog-contact-form .request-form .form-item .icon {
   position: absolute;
-  top: 50%;
+  top: 25px;
   right: 30px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);

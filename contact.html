@@ -267,20 +267,20 @@
                         <h2 class="title mb-0">Leave A Reply</h2>
                         <p class="mb-30 mt-10">Fill-up The Form and Message us of your question</p>
                         <div class="request-form">
-                            <form action="https://html.rrdevs.net/bizan/mail.php" method="post" id="ajax_contact"
+                          <form action="https://html.rrdevs.net/bizan/mail.php" method="post" id="ajax_contact"
                                 class="form-horizontal">
                                 <div class="form-group row">
                                     <div class="col-md-6">
                                         <div class="form-item">
                                             <input type="text" id="fullname" name="fullname" class="form-control"
-                                                placeholder="Your Name">
+                                                placeholder="Your Name" required>
                                             <div class="icon"><i class="fa-regular fa-user"></i></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-item">
                                             <input type="email" id="email" name="email" class="form-control"
-                                                placeholder="Your Email">
+                                                placeholder="Your Email" required>
                                             <div class="icon"><i class="fa-sharp fa-regular fa-envelope"></i></div>
                                         </div>
                                     </div>
@@ -304,7 +304,7 @@
                                     <div class="col-md-12">
                                         <div class="form-item message-item">
                                             <textarea id="message" name="message" cols="30" rows="5"
-                                                class="form-control address" placeholder="Message"></textarea>
+                                                class="form-control address" placeholder="Message" required></textarea>
                                             <div class="icon"><i class="fa-regular fa-comments"></i></div>
                                         </div>
                                     </div>
@@ -562,6 +562,54 @@
             });
         });
     </script>
+    <script>
+document.getElementById("ajax_contact").addEventListener("submit", function(e) {
+    let valid = true;
+
+    // clear old errors
+    document.querySelectorAll(".error-message").forEach(el => el.innerText = "");
+
+    // fullname
+    if (document.getElementById("fullname").value.trim() === "") {
+        document.getElementById("error-fullname").innerText = "Please enter your name";
+        valid = false;
+    }
+
+    // email
+    let email = document.getElementById("email").value.trim();
+    if (email === "") {
+        document.getElementById("error-email").innerText = "Please enter your email";
+        valid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById("error-email").innerText = "Please enter a valid email";
+        valid = false;
+    }
+
+    // subject (from hidden input updated by nice-select)
+    if (document.getElementById("subject").value === "") {
+        document.getElementById("error-subject").innerText = "Please select a subject";
+        valid = false;
+    }
+
+    // message
+    if (document.getElementById("message").value.trim() === "") {
+        document.getElementById("error-message").innerText = "Please enter your message";
+        valid = false;
+    }
+
+    if (!valid) {
+        e.preventDefault();
+    }
+});
+
+// connect nice-select with hidden input
+document.querySelectorAll(".nice-select .option").forEach(option => {
+    option.addEventListener("click", function() {
+        let value = this.getAttribute("data-value");
+        document.getElementById("subject").value = value;
+    });
+});
+</script>
 </body>
 
 <!-- Mirrored from html.rrdevs.net/bizan/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Sep 2025 07:30:40 GMT -->
