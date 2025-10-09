@@ -17466,7 +17466,7 @@ overflow: hidden;
   margin-bottom: 20px;
 }
 .advisor-photo {
-  width: 170px;
+  width: auto;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
